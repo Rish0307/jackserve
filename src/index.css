@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Diorama card infinite loop animations ── */
+@keyframes diorama-pan-right {
+  from { transform: translate(0%, 0%) scale(1.05); }
+  to   { transform: translate(4%, -2%) scale(1.08); }
+}
+@keyframes diorama-pan-left {
+  from { transform: translate(0%, 0%) scale(1.05); }
+  to   { transform: translate(-4%, 2%) scale(1.08); }
+}
+@keyframes diorama-pan-right-slow {
+  from { transform: translate(0%, -1%) scale(1.06); }
+  to   { transform: translate(3%, 1%) scale(1.09); }
+}
+@keyframes diorama-pan-left-slow {
+  from { transform: translate(0%, 1%) scale(1.06); }
+  to   { transform: translate(-3%, -1%) scale(1.09); }
+}
+@keyframes diorama-zoom-in {
+  from { transform: translate(0%, 0%) scale(1.04); }
+  to   { transform: translate(-1%, -1%) scale(1.1); }
+}
+@keyframes diorama-zoom-out {
+  from { transform: translate(0%, 0%) scale(1.1); }
+  to   { transform: translate(1%, 1%) scale(1.04); }
+}
+@keyframes diorama-pan-up {
+  from { transform: translate(0%, 0%) scale(1.06); }
+  to   { transform: translate(2%, -4%) scale(1.08); }
+}
+
+html,
+body,
+#root {
+  background-color: #0C0C0C;
+  font-family: 'Kanit', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0C0C0C; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+
+
+/* Infinite marquee — brand ticker */
+@keyframes marquee-rtl {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.brand-ticker-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-rtl 30s linear infinite;
+}
+.brand-ticker-track:hover { animation-play-state: paused; }
+
+/* Continuous infinite travel diorama marquee */
+@keyframes marquee-travel-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-travel-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee-row-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-travel-left 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-row-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-travel-right 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-row-left:hover,
+.marquee-row-right:hover {
+  animation-play-state: paused;
+}
+
+/* Form inputs */
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(215, 226, 234, 0.12);
+  border-radius: 14px;
+  padding: 14px 18px;
+  color: #D7E2EA;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 300;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+.form-input::placeholder { color: rgba(215,226,234,0.3); }
+.form-input:focus {
+  border-color: rgba(182, 0, 168, 0.6);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 0 3px rgba(182, 0, 168, 0.12);
+}
+
+/* Star gold */
+.star { color: #fbbf24; }
+
+/* Pulse dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+.pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
