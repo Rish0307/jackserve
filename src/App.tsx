@@ -1087,7 +1087,7 @@ const ContactSection: React.FC = () => {
 📅 *Travel Dates:* ${form.travelDates || 'Not specified'}
 💬 *Message:* ${form.message || 'None'}
 
-_via jacksbooking.netlify.app_
+_via jackserve.vercel.app_
     `.trim();
 
     try {
