@@ -89,28 +89,28 @@ const SERVICES_LIST = [
 
 
 const SERVICE_OPTIONS = [
-  'Air Travel / Flight Reservation',
-  'Hotel / Accommodation',
-  'Airbnb Booking',
-  'Car Rental',
-  'Live Event / Concert / Festival',
-  'Movie Night',
-  'IKEA / Furniture Order',
-  'Dining / Restaurant Bill',
-  'Parking Space',
-  'Traffic Fine Payment',
-  'Truck Service',
-  'Theme Park Ticket',
-  'Water Attraction / Adventure Pass',
-  'Salon & Spa',
-  'Cruise Adventure',
-  'Train Journey',
-  'Bus Ticket',
-  'Viator Tour',
-  'Georgia Aquarium Ticket',
-  'Bill Payment (Rent / Mobile / Challan)',
-  'Online Custom Order',
-  'Other',
+  { label: 'Air Travel / Flight Reservation',      available: false },
+  { label: 'Hotel / Accommodation',                available: false },
+  { label: 'Airbnb Booking',                       available: false },
+  { label: 'Car Rental',                           available: false },
+  { label: 'Live Event / Concert / Festival',      available: false },
+  { label: 'Movie Night',                          available: false },
+  { label: 'IKEA / Furniture Order',               available: false },
+  { label: 'Dining / Restaurant Bill',             available: true  },
+  { label: 'Parking Space',                        available: false },
+  { label: 'Traffic Fine Payment',                 available: false },
+  { label: 'Truck Service',                        available: false },
+  { label: 'Theme Park Ticket',                    available: false },
+  { label: 'Water Attraction / Adventure Pass',    available: false },
+  { label: 'Salon & Spa',                          available: false },
+  { label: 'Cruise Adventure',                     available: false },
+  { label: 'Train Journey',                        available: false },
+  { label: 'Bus Ticket',                           available: false },
+  { label: 'Viator Tour',                          available: false },
+  { label: 'Georgia Aquarium Ticket',              available: false },
+  { label: 'Bill Payment (Rent / Mobile / Challan)', available: false },
+  { label: 'Online Custom Order',                  available: false },
+  { label: 'Other',                                available: false },
 ];
 
 // ─── CONTACT BUTTON (Solid White Pill) ────────────────────────────────────────
@@ -1233,7 +1233,16 @@ _via jackserve.vercel.app_
                 <select id="f-service" name="service" required value={form.service} onChange={onChange}
                   className="form-input cursor-pointer" style={{ background: '#131313' }}>
                   <option value="" disabled style={{ background: '#131313' }}>Select a service...</option>
-                  {SERVICE_OPTIONS.map(o => <option key={o} value={o} style={{ background: '#131313' }}>{o}</option>)}
+                  {SERVICE_OPTIONS.map(o => (
+                    <option
+                      key={o.label}
+                      value={o.available ? o.label : ''}
+                      disabled={!o.available}
+                      style={{ background: '#131313', color: o.available ? '#D7E2EA' : '#6b7280' }}
+                    >
+                      {o.available ? o.label : `🔒 ${o.label} — Coming Soon`}
+                    </option>
+                  ))}
                 </select>
               </div>
 
