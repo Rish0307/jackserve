@@ -13,7 +13,7 @@ import FadeIn from './components/FadeIn';
 
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
 const TELEGRAM_BOT_TOKEN = '8768120693:AAEzLR8wITx81KgHvgPkX-G4xQIEV1HcRf8';
-const TELEGRAM_CHAT_ID   = '1787324695';
+const TELEGRAM_CHAT_ID   = '656476228';
 
 // ─── DATA ─────────────────────────────────────────────────────────────────────
 
