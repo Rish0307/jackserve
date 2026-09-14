@@ -96,7 +96,7 @@ const SERVICE_OPTIONS = [
   { label: 'Live Event / Concert / Festival',        available: true },
   { label: 'Movie Night',                            available: true },
   { label: 'IKEA / Furniture Order',                 available: true },
-  { label: 'Dining / Restaurant Bill',               available: true },
+  { label: 'Food and Dining Services',               available: true },
   { label: 'Parking Space',                          available: true },
   { label: 'Traffic Fine Payment',                   available: true },
   { label: 'Truck Service',                          available: true },
