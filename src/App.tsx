@@ -81,7 +81,7 @@ const SERVICES_GRID = [
 const SERVICES_LIST = [
   { num: '01', name: 'Air Travel',         desc: 'All major US airline bookings at unbeatable prices — JetBlue, United, Southwest, American and more. Confirmation in hours.' },
   { num: '02', name: 'Accommodations',     desc: 'Hotels, Airbnb stays, and short-term rentals worldwide. Best rates, any dates, any location — we handle it all.' },
-  { num: '03', name: 'Events & Concerts',  desc: 'Live events, festivals, concerts, and movie nights. Premium tickets at 60% off retail — DM before they sell out.' },
+  { num: '03', name: 'Events & Concerts',  desc: 'Live events, festivals, concerts, and movie nights. Premium tickets at 50% off retail — DM before they sell out.' },
   { num: '04', name: 'Dining & Lifestyle', desc: 'Restaurant bills, salon & spa bookings, theme parks, water attractions, and adventure passes — all covered.' },
   { num: '05', name: 'Bills & Payments',   desc: 'Traffic fines, mobile bills, rent payments, bus tickets, and challan payments processed fast and securely.' },
 ];
@@ -89,28 +89,28 @@ const SERVICES_LIST = [
 
 
 const SERVICE_OPTIONS = [
-  { label: 'Air Travel / Flight Reservation',      available: false },
-  { label: 'Hotel / Accommodation',                available: false },
-  { label: 'Airbnb Booking',                       available: false },
-  { label: 'Car Rental',                           available: false },
-  { label: 'Live Event / Concert / Festival',      available: false },
-  { label: 'Movie Night',                          available: false },
-  { label: 'IKEA / Furniture Order',               available: false },
-  { label: 'Dining / Restaurant Bill',             available: true  },
-  { label: 'Parking Space',                        available: false },
-  { label: 'Traffic Fine Payment',                 available: false },
-  { label: 'Truck Service',                        available: false },
-  { label: 'Theme Park Ticket',                    available: false },
-  { label: 'Water Attraction / Adventure Pass',    available: false },
-  { label: 'Salon & Spa',                          available: false },
-  { label: 'Cruise Adventure',                     available: false },
-  { label: 'Train Journey',                        available: false },
-  { label: 'Bus Ticket',                           available: false },
-  { label: 'Viator Tour',                          available: false },
-  { label: 'Georgia Aquarium Ticket',              available: false },
-  { label: 'Bill Payment (Rent / Mobile / Challan)', available: false },
-  { label: 'Online Custom Order',                  available: false },
-  { label: 'Other',                                available: false },
+  { label: 'Air Travel / Flight Reservation',        available: true },
+  { label: 'Hotel / Accommodation',                  available: true },
+  { label: 'Airbnb Booking',                         available: true },
+  { label: 'Car Rental',                             available: true },
+  { label: 'Live Event / Concert / Festival',        available: true },
+  { label: 'Movie Night',                            available: true },
+  { label: 'IKEA / Furniture Order',                 available: true },
+  { label: 'Dining / Restaurant Bill',               available: true },
+  { label: 'Parking Space',                          available: true },
+  { label: 'Traffic Fine Payment',                   available: true },
+  { label: 'Truck Service',                          available: true },
+  { label: 'Theme Park Ticket',                      available: true },
+  { label: 'Water Attraction / Adventure Pass',      available: true },
+  { label: 'Salon & Spa',                            available: true },
+  { label: 'Cruise Adventure',                       available: true },
+  { label: 'Train Journey',                          available: true },
+  { label: 'Bus Ticket',                             available: true },
+  { label: 'Viator Tour',                            available: true },
+  { label: 'Georgia Aquarium Ticket',                available: true },
+  { label: 'Bill Payment (Rent / Mobile / Challan)', available: true },
+  { label: 'Online Custom Order',                    available: true },
+  { label: 'Other',                                  available: true },
 ];
 
 // ─── CONTACT BUTTON (Solid White Pill) ────────────────────────────────────────
@@ -282,7 +282,7 @@ const HeroSection: React.FC = () => {
             </span>
             <span className="text-white/20">/</span>
             <span className="text-[10px] sm:text-[11px] font-bold tracking-wider text-white uppercase">
-              Flat 60% Off
+              Flat 50% Off
             </span>
           </div>
           <p className="text-[#D7E2EA]/90 font-light text-xs sm:text-sm md:text-base leading-relaxed tracking-tight">
@@ -446,7 +446,7 @@ const MarqueeSection: React.FC = () => {
 // ─── ABOUT / INTRO SECTION (original layout, booking-focused content) ─────────
 
 const ABOUT_TEXT =
-  "With partnerships across every major US platform, i specialise in scoring the best prices on flights, hotels, airbnb, events, and more — up to 60% off retail. I genuinely love saving people money and making booking effortless. Let's get you the best deal possible!";
+  "With partnerships across every major US platform, i specialise in scoring the best prices on flights, hotels, airbnb, events, and more — up to 50% off retail. I genuinely love saving people money and making booking effortless. Let's get you the best deal possible!";
 
 const AboutSection: React.FC = () => (
   <section
@@ -506,7 +506,7 @@ const AboutSection: React.FC = () => (
             {[
               { icon: Zap,         title: 'Instant Booking',          desc: 'Confirmation in hours, not days.',            grad: 'from-amber-400 to-yellow-600',  glow: '#f59e0b' },
               { icon: Shield,      title: '100% Verified',            desc: 'Every deal is real and sureshot.',            grad: 'from-emerald-400 to-teal-600',   glow: '#10b981' },
-              { icon: DollarSign,  title: 'Best Price Guaranteed',    desc: 'Up to 60% off retail. Always.',              grad: 'from-fuchsia-400 to-purple-600', glow: '#c084fc' },
+              { icon: DollarSign,  title: 'Best Price Guaranteed',    desc: 'Up to 50% off retail. Always.',              grad: 'from-fuchsia-400 to-purple-600', glow: '#c084fc' },
             ].map(({ icon: Icon, title, desc, grad, glow }) => (
               <div
                 key={title}
@@ -685,7 +685,7 @@ const DealsSection: React.FC = () => (
             </span>
             <span className="text-white/20">/</span>
             <span className="text-[11px] sm:text-xs font-bold tracking-wider text-emerald-400 uppercase">
-              Flat 60% Off
+              Flat 50% Off
             </span>
           </div>
         </div>
@@ -715,7 +715,7 @@ const DealsSection: React.FC = () => (
                     border: '1px solid rgba(215, 226, 234, 0.15)',
                   }}
                 >
-                  60% OFF
+                  50% OFF
                 </span>
               </div>
 
@@ -770,7 +770,7 @@ const DealsSection: React.FC = () => (
                   <p className="text-xs text-[#D7E2EA]/40 font-light mt-1">Direct confirmation on all major US carriers</p>
                 </div>
                 <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/10 text-white border border-white/15">
-                  60% OFF
+                  50% OFF
                 </span>
               </div>
 
@@ -889,7 +889,7 @@ const DealsSection: React.FC = () => (
                       </div>
                     </div>
                     <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                      60% OFF
+                      50% OFF
                     </span>
                   </div>
                 ))}
@@ -927,7 +927,7 @@ const TestimonialsSection: React.FC = () => (
             handle: '@diane_c',
             img: '/testimonial_1.jpg',
             booking: 'Roundtrip JetBlue + Miami Airbnb',
-            saved: 'Saved $840 (60% Off)',
+            saved: 'Saved $840 (50% Off)',
             quote: 'Booked flights for my family of 4 plus a 5-night villa in South Beach. Everything was confirmed in under 3 hours with official confirmation codes. The savings were 100% genuine.',
             icon: Plane,
             grad: 'from-sky-400 to-blue-600',
@@ -939,7 +939,7 @@ const TestimonialsSection: React.FC = () => (
             handle: '@m_rivera_biz',
             img: '/testimonial_2.jpg',
             booking: 'United Airlines First Class + 4-Star Hotel',
-            saved: 'Saved $620 (60% Off)',
+            saved: 'Saved $620 (50% Off)',
             quote: 'Needed last-minute business class seats to Chicago. Jack got my tickets and hotel sorted directly on WhatsApp with zero hassle. Been using him for all work travel ever since.',
             icon: Hotel,
             grad: 'from-amber-400 to-orange-600',
@@ -951,7 +951,7 @@ const TestimonialsSection: React.FC = () => (
             handle: '@priya_events',
             img: '/testimonial_3.jpg',
             booking: 'Georgia Aquarium Group VIP + Viator Tour',
-            saved: 'Saved $490 (60% Off)',
+            saved: 'Saved $490 (50% Off)',
             quote: 'Secured 12 VIP aquarium admissions and city tours for our company retreat. Direct digital passes arrived right on time without a hitch. Seamless communication throughout.',
             icon: Fish,
             grad: 'from-cyan-400 to-teal-600',
@@ -1040,7 +1040,7 @@ const TestimonialsSection: React.FC = () => (
             { label: 'Instant Ticket Issuance', icon: Zap },
             { label: 'Official PNR Confirmation', icon: CheckCircle2 },
             { label: '24/7 Live Support', icon: Shield },
-            { label: 'Guaranteed 60% Savings', icon: DollarSign },
+            { label: 'Guaranteed 50% Savings', icon: DollarSign },
           ].map(({ label, icon: Icon }) => (
             <div
               key={label}
@@ -1187,6 +1187,57 @@ _via jackserve.vercel.app_
           </div>
         </FadeIn>
 
+        {/* ── Payment Methods ── */}
+        <FadeIn className="mb-6">
+          <div
+            className="rounded-[24px] p-5 sm:p-6"
+            style={{
+              background: 'linear-gradient(145deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)',
+              border: '1px solid rgba(215,226,234,0.1)',
+              backdropFilter: 'blur(12px)',
+            }}
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-[#D7E2EA]/40 mb-4 text-center">Accepted Payment Methods</p>
+            <div className="grid grid-cols-2 gap-3">
+              {/* Fedwire */}
+              <div
+                className="flex items-center gap-3 rounded-2xl p-3.5"
+                style={{ background: 'rgba(52,211,153,0.07)', border: '1px solid rgba(52,211,153,0.2)' }}
+              >
+                <div
+                  className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
+                  style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', boxShadow: '0 4px 12px rgba(16,185,129,0.35)' }}
+                >
+                  <DollarSign size={16} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[#D7E2EA] uppercase tracking-tight">Fedwire</p>
+                  <p className="text-[10px] text-[#D7E2EA]/40 font-light">USA Bank Transfer Only</p>
+                </div>
+              </div>
+              {/* Crypto */}
+              <div
+                className="flex items-center gap-3 rounded-2xl p-3.5"
+                style={{ background: 'rgba(251,191,36,0.07)', border: '1px solid rgba(251,191,36,0.2)' }}
+              >
+                <div
+                  className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 font-black text-sm"
+                  style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)', boxShadow: '0 4px 12px rgba(245,158,11,0.35)', color: 'white' }}
+                >
+                  ₿
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[#D7E2EA] uppercase tracking-tight">Crypto</p>
+                  <p className="text-[10px] text-[#D7E2EA]/40 font-light">BTC · ETH · USDT</p>
+                </div>
+              </div>
+            </div>
+            <p className="text-[10px] text-[#D7E2EA]/30 font-light mt-3 text-center">
+              We only accept Fedwire (USA accounts) &amp; Cryptocurrency payments
+            </p>
+          </div>
+        </FadeIn>
+
         <FadeIn delay={0.1}>
           {status === 'success' ? (
             <motion.div
@@ -1318,7 +1369,7 @@ const Footer: React.FC = () => (
       Jack's Booking
     </p>
     <p className="text-[#D7E2EA]/25 text-xs font-light uppercase tracking-widest">
-      © 2026 Jack's Booking Services · 🇺🇸 USA Premium · All Deals 60% OFF · SURESHOT 💯
+      © 2026 Jack's Booking Services · 🇺🇸 USA Premium · All Deals 50% OFF · SURESHOT 💯
     </p>
   </footer>
 );
