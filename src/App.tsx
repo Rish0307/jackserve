@@ -1081,7 +1081,7 @@ const ContactSection: React.FC = () => {
 🔔 *New Booking Request — Jack's Booking Services*
 
 👤 *Name:* ${form.name}
-📱 *WhatsApp / Phone:* ${form.phone}
+📱 *Telegram:* ${form.phone}
 📧 *Email:* ${form.email}
 🛎️ *Service:* ${form.service}
 📅 *Travel Dates:* ${form.travelDates || 'Not specified'}
@@ -1215,7 +1215,7 @@ _via jackserve.vercel.app_
             >
               {[
                 { id: 'f-name',  name: 'name',  label: 'Full Name *',             type: 'text',  placeholder: 'Your name',              req: true },
-                { id: 'f-phone', name: 'phone', label: 'WhatsApp / Phone *',       type: 'tel',   placeholder: '+1 (555) 000-0000',       req: true },
+                { id: 'f-phone', name: 'phone', label: 'Telegram Username *',       type: 'text', placeholder: '@yourusername',          req: true },
                 { id: 'f-email', name: 'email', label: 'Email *',                  type: 'email', placeholder: 'you@email.com',           req: true },
                 { id: 'f-dates', name: 'travelDates', label: 'Travel Dates (optional)', type: 'text', placeholder: 'e.g. Aug 25 – Sep 2, 2026', req: false },
               ].map(({ id, name, label, type, placeholder, req }) => (
